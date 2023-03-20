@@ -1,0 +1,21 @@
+.footer{
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--main-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & &__about{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;        
+    }
+
+    & &__about-address{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
