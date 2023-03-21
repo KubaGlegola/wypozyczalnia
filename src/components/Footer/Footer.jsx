@@ -8,7 +8,7 @@ import Container from '../container/Container'
 const Footer = () => {
   return (
     <footer>
-      <Container className="footer">
+      <Container className="footer">        
         <div className="footer__about">
             <h2 className="footer__title">Wypożyczalnia sprzętu ogrodniczo-budowlanego Łukasz Kustra</h2>
             <p className="footer__about-address">
@@ -19,11 +19,18 @@ const Footer = () => {
         </div>
         <div className="footer__contact">
             <h2 className="footer__title">skontaktuj się z nami!</h2>
-            <a href="tel:690-182-219"><span className='iconContainer'><BsTelephone className="icon"/></span>690 182 219</a>
-            <a href="mailto:wynajemkustra@wp.pl"><span className='iconContainer'><GoMail className="icon"/></span>wynajemkustra@wp.pl</a>
-            <a href="https://www.facebook.com/profile.php?id=100088261512715" target="_blank"><span className='iconContainer'><FiFacebook className="icon" /></span>Facebook</a>
-            <a href="https://www.instagram.com/wypozyczalniakustra" target="_blank"><span className='iconContainer'><FiInstagram className="icon" /></span>Instagram</a>
+              <a href="tel:690-182-219"><span className='iconContainer'><BsTelephone className="icon"/></span>690 182 219</a>
+              <a href="mailto:wynajemkustra@wp.pl"><span className='iconContainer'><GoMail className="icon"/></span>wynajemkustra@wp.pl</a>
+              <a href="https://www.facebook.com/profile.php?id=100088261512715" target="_blank"><span className='iconContainer'><FiFacebook className="icon" /></span>Facebook</a>
+              <a href="https://www.instagram.com/wypozyczalniakustra" target="_blank"><span className='iconContainer'><FiInstagram className="icon" /></span>Instagram</a>
           </div>
+        <div className="footer__menu">
+          <h2 className="footer__title">Menu</h2>
+          <a href="#">Strona główna</a>
+          <a href="#">Oferta</a>
+          <a href="#">Kontakt</a>
+          <a href="#">FAQ</a>
+        </div>
         <div className="footer__info">
           <h2 className="footer__title">Informacje</h2>
             <a href="#">Najczęściej zadawane pytania</a>
