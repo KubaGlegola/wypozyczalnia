@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 600px;
+    min-height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,11 @@
     & &__container{        
         text-align: center;
         color: var(--white-color);
-        backdrop-filter: blur(5px);
+        background-color: rgba(34, 35, 46, 0.4);
+        backdrop-filter: blur(3px);
         border-radius: 1rem;
+        margin: 1rem;
+        box-shadow: var(--box-shadow);
     }
 
     &__content{
@@ -35,6 +38,6 @@
     &__buttonsContainer{
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
     }
 }

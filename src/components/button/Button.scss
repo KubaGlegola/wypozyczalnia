@@ -1,0 +1,40 @@
+.button{
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    transition: all ease-in-out .4s;
+    box-shadow: var(--box-shadow);
+
+    &--primary{
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        border: 3px solid transparent;
+
+        &:hover, &:focus{
+            border-color: var(--accent-color);
+        }
+
+        &:active{
+            filter: brightness(1.4);
+        }
+    }
+
+    &--secondary{
+        border: 3px solid var(--accent-color);
+        color: var(--white-color);
+
+        &:hover, &:focus{
+            border-color: var(--primary-color);
+        }
+
+        &:active{
+            filter: brightness(0.5);
+        }
+    }
+
+}

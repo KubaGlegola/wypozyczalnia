@@ -92,10 +92,11 @@ footer{
     }
 
     @media(min-width: 1024px){
-        grid-template-columns: repeat(4, 1fr);
+        font-size: 14px;
+        grid-template-columns: repeat(4, max-content);
         grid-template-rows: 1fr;
         & &__title{
-            font-size: 1.5rem;
+            max-width: 15rem;
         }
         
     }

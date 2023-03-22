@@ -12,58 +12,59 @@ import mtd from "/src/assets/producers/mtd.webp";
 import trotec from "/src/assets/producers/trotec.webp";
 import weibang from "/src/assets/producers/weibang.webp";
 import './producers.scss'
+import Container from '../container/Container';
 
 const producers = () => {
   return (
-    <>
-    <h2></h2>
-    <Carousel
-        className="carousel"
-        axis="horizontal"
-        showThumbs={false}
-        showStatus={false}
-        showIndicators={false}
-        showArrows={false}
-        swipeable={true}
-        autoPlay={true}
-        interval="2000"
-        infiniteLoop={true}
-        transitionTime="1000"
-        centerMode={true}
-        centerSlidePercentage="33"
-      >
-        <div className="carousel__item">
-          <img src={bosch} alt="bosch" />
-        </div>
-        <div className="carousel__item">
-          <img src={cedrus} alt="cedrus" />
-        </div>
-        <div className="carousel__item">
-          <img src={echo} alt="echo" />
-        </div>
-        <div className="carousel__item">
-          <img src={karcher} alt="karcher" />
-        </div>
-        <div className="carousel__item">
-          <img src={makita} alt="makita" />
-        </div>
-        <div className="carousel__item">
-          <img src={mastercut} alt="mastercut" />
-        </div>
-        <div className="carousel__item">
-          <img src={lumag} alt="lumag" />
-        </div>
-        <div className="carousel__item">
-          <img src={mtd} alt="mtd" />
-        </div>
-        <div className="carousel__item">
-          <img src={trotec} alt="trotec" />
-        </div>
-        <div className="carousel__item">
-          <img src={weibang} alt="weibang" />
-        </div>
-      </Carousel>
-      </>
+    <Container className="producers">
+      <h2 className="producers__title">w naszej ofercie posiadamy sprzęt najlepszych firm na rynku</h2>
+      <Carousel
+          className="carousel"
+          axis="horizontal"
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          showArrows={false}
+          swipeable={true}
+          autoPlay={true}
+          interval="2000"
+          infiniteLoop={true}
+          transitionTime="1000"
+          centerMode={true}
+          centerSlidePercentage="33"
+        >
+          <div className="carousel__item">
+            <img src={bosch} alt="bosch" />
+          </div>
+          <div className="carousel__item">
+            <img src={cedrus} alt="cedrus" />
+          </div>
+          <div className="carousel__item">
+            <img src={echo} alt="echo" />
+          </div>
+          <div className="carousel__item">
+            <img src={karcher} alt="karcher" />
+          </div>
+          <div className="carousel__item">
+            <img src={makita} alt="makita" />
+          </div>
+          <div className="carousel__item">
+            <img src={mastercut} alt="mastercut" />
+          </div>
+          <div className="carousel__item">
+            <img src={lumag} alt="lumag" />
+          </div>
+          <div className="carousel__item">
+            <img src={mtd} alt="mtd" />
+          </div>
+          <div className="carousel__item">
+            <img src={trotec} alt="trotec" />
+          </div>
+          <div className="carousel__item">
+            <img src={weibang} alt="weibang" />
+          </div>
+        </Carousel>
+      </Container>
   )
 }
 

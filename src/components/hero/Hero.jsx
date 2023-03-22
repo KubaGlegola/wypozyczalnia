@@ -1,5 +1,7 @@
 import React from 'react'
+import Button from '../button/Button'
 import Container from '../container/Container'
+import { Link } from 'react-router-dom'
 import './Hero.scss'
 
 const Hero = () => {
@@ -10,8 +12,8 @@ const Hero = () => {
           <h3 className="hero__subtitle">Wypożyczalnia sprzętu ogrodniczo-budowlanego</h3>
           <h2 className="hero__title">najlepszy sprzęt w jednym miejscu</h2>
           <div className="hero__buttonsContainer">
-            <button>kontakt</button>
-            <button>oferta</button>
+            <Button className="button--secondary"><Link to="/kontakt">kontakt</Link></Button>
+            <Button className="button--primary"><Link to="/oferta">oferta</Link></Button>
           </div>
         </div>        
       </Container>

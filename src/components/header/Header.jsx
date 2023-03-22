@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import { Squash as Hamburger } from 'hamburger-react';
 import './Header.scss'
 import logo from '/src/assets/logo.png';
+import Menu from '../Menu/Menu';
 
 
 const Header = () => {
@@ -13,13 +14,8 @@ const Header = () => {
   return (
     <div className="header">
         <img src={logo} className='header__logo' />
-        {!isDesktop &&<Hamburger toggled={isOpen} toggle={setOpen} />}
-        <ul className={`header__menu ${isOpen ? "header__menu--visible" : ""}`}>
-            <li>Strona główna</li>
-            <li>Oferta</li>
-            <li>Kontakt</li>
-            <li>FAQ</li>
-        </ul>
+        {!isDesktop && <Hamburger toggled={isOpen} toggle={setOpen} />}
+        <Menu isOpen={isOpen}/>        
     </div>
   )
 }
