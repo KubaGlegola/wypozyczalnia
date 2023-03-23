@@ -1,80 +1,84 @@
-.item{
+.item {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 0.5rem;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  max-width: 300px;
+
+  &__imageContainer {
+    width: 100px;
     display: flex;
-    gap: .5rem;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: var(--box-shadow);
+  }
 
-    &__imageContainer{
-        width: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &__image {
+    width: 100px;
+    object-fit: contain;
+  }
+
+  & &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  & &__name {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  & &__producer {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    color: #808080;
+  }
+
+  & &__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+  }
+
+  & &__button {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: auto;
+    font-size: 14px;
+    padding: 0.7rem;
+  }
+
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr;
+
+    &__imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-height: 200px;
     }
 
-    &__image{
-        width: 100px;
-        object-fit: cover;
+    &__image {
+      width: 280px;
+      height: 200px;
     }
 
-    & &__content{
-        max-width: 250px;
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
+    & &__content {
+      max-width: 280px;
     }
 
-    & &__name{
-        text-transform: uppercase;
+    & &__button {
+      grid-column: 1;
     }
-
-    & &__category{
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        margin-right: .5rem;
-        border-radius: .5rem;
-        text-transform: uppercase;
-        font-size: 10px;
-        font-weight: 700;
-        color: var(--white-color);
-
-        &--garden{
-            background-color: #30BF19;  
-        }
-
-        &--house{
-            background-color: #2162E3; 
-        }
-        
-        &--construction{
-            background-color: #e9aa0b;        
-        }
-
-        &--tools{
-            background-color: #FF3A3A; 
-        }
-    }
-
-    & &__producer{
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 500;
-        color: #808080;
-    }
-
-    & &__description{
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    & &__button{
-        font-size: 14px;
-        padding: .7rem;
-        margin-left: auto;
-    }
+  }
 }

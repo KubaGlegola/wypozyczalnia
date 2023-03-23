@@ -1,0 +1,26 @@
+.category {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--white-color);
+
+  &--garden {
+    background-color: #30bf19;
+  }
+
+  &--house {
+    background-color: #2162e3;
+  }
+
+  &--construction {
+    background-color: #e9aa0b;
+  }
+
+  &--tools {
+    background-color: #ff3a3a;
+  }
+}

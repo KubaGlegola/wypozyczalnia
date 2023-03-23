@@ -1,0 +1,42 @@
+.itemModal {
+  & &__image {
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
+
+  & &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  & &__name {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  & &__producer {
+    text-transform: uppercase;
+    color: #808080;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  & &__price {
+    & > span {
+      display: block;
+    }
+  }
+
+  &__button {
+    color: #000;
+  }
+
+  @media (min-width: 650px) {
+    & &__button {
+      margin-left: auto;
+    }
+  }
+}
