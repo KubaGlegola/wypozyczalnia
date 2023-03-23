@@ -1,5 +1,6 @@
 .item{
     display: flex;
+    gap: .5rem;
     margin: 0 auto;
     background-color: white;
     padding: 1rem;
@@ -8,7 +9,9 @@
 
     &__imageContainer{
         width: 100px;
-        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__image{
@@ -28,20 +31,36 @@
     }
 
     & &__category{
-        display: block;
+        display: inline-block;
         padding: 0.5rem 1rem;
-        background-color: #30BF19;
-        margin-right: auto;
+        margin-right: .5rem;
         border-radius: .5rem;
         text-transform: uppercase;
-        color: var(--white-color);
         font-size: 10px;
+        font-weight: 700;
+        color: var(--white-color);
 
+        &--garden{
+            background-color: #30BF19;  
+        }
+
+        &--house{
+            background-color: #2162E3; 
+        }
+        
+        &--construction{
+            background-color: #e9aa0b;        
+        }
+
+        &--tools{
+            background-color: #FF3A3A; 
+        }
     }
 
     & &__producer{
         text-transform: uppercase;
         font-size: 14px;
+        font-weight: 500;
         color: #808080;
     }
 
