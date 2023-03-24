@@ -6,19 +6,20 @@ import Container from '../container/Container';
 
 const Items = props => {
   return (
-    <Container className="items">
-      {items.map(item => {
-        // return <Item key={item.id} id={item.id} image={item.img} categories={item.category} name={item.name} producer={item.producer} description={item.description} />
-        return (
-          <Item
-            item={item}
-            key={item.id}
-            showModal={props.showModal}
-            parentCallback={props.parentCallback}
-          />
-        );
-      })}
-    </Container>
+    <div className="items">
+      <Container className="items__container">
+        {items.map(item => {
+          return (
+            <Item
+              item={item}
+              key={item.id}
+              showModal={props.showModal}
+              parentCallback={props.parentCallback}
+            />
+          );
+        })}
+      </Container>
+    </div>
   );
 };
 

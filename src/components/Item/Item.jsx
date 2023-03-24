@@ -15,14 +15,14 @@ const Item = props => {
   return (
     <div className="item">
       <div className="item__imageContainer">
-        <img src={img} className="item__image" />
+        <img src={img} className="item__image" loading="lazy" />
       </div>
       <div className="item__content">
         <div className="item__categories">
           <ItemCategory categories={category} />
         </div>
         <h3 className="item__name">{name}</h3>
-        <p className="item__producer">{producer}</p>
+        {producer && <p className="item__producer">{producer}</p>}
         <p className="item__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum
           corrupti, suscipit doloremque voluptas, facere in quidem accusamus

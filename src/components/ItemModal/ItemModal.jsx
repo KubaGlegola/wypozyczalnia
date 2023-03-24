@@ -34,7 +34,9 @@ const ItemModal = props => {
           magni praesentium?
         </p>
         <p className="itemModal__price">
-          <span>{`Cena za 6 godzin: ${priceForSixHour} zł`}</span>
+          {priceForSixHour && (
+            <span>{`Cena za 6 godzin: ${priceForSixHour} zł`}</span>
+          )}
           <span>{`Cena za dobę: ${priceForDay} zł`}</span>
         </p>
         <Button

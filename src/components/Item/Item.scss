@@ -19,6 +19,7 @@
 
   &__image {
     width: 100px;
+    height: 120px;
     object-fit: contain;
   }
 
@@ -64,12 +65,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      max-height: 200px;
+      width: 240px;
+      height: 200px;
+      margin: 0 auto;
     }
 
     &__image {
-      width: 280px;
+      width: 240px;
       height: 200px;
     }
 
@@ -77,8 +79,23 @@
       max-width: 280px;
     }
 
+    & &__name {
+      font-size: 20px;
+    }
+
+    & &__producer {
+      font-size: 16px;
+    }
+
+    & &__description {
+      margin-top: auto;
+      font-size: 14px;
+    }
+
     & &__button {
+      margin-left: auto;
       grid-column: 1;
+      grid-row: 3;
     }
   }
 }
