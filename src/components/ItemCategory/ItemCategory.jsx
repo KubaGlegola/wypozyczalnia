@@ -16,6 +16,8 @@ const ItemCategory = props => {
             ? 'category--construction'
             : category === 'narzędzia'
             ? 'category--tools'
+            : category === 'wszystko'
+            ? 'category--all'
             : ''
         }`}
       >

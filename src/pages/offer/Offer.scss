@@ -1,0 +1,18 @@
+.offer {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem auto 0;
+    padding: 1rem;
+  }
+
+  &__filter {
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-basis: 100%;
+    text-align: center;
+  }
+}

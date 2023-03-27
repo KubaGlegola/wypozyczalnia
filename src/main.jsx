@@ -6,6 +6,7 @@ import './global-styles/index.scss';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/homePage/HomePage';
 import Offer from './pages/offer/Offer';
+import FaqPage from './pages/FaqPage/FaqPage';
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,20 @@ const router = createBrowserRouter([
       {
         path: '/oferta',
         element: <Offer />,
+        children: [
+          {
+            path: ':category',
+            element: <Offer />,
+          },
+        ],
       },
       {
         path: '/kontakt',
         element: <ContactPage />,
+      },
+      {
+        path: '/faq',
+        element: <FaqPage />,
       },
     ],
   },

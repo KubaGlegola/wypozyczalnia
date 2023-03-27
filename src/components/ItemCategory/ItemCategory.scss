@@ -1,12 +1,18 @@
 .category {
   display: inline-block;
   padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
   margin-right: 0.5rem;
+
   border-radius: 0.5rem;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: 700;
   color: var(--white-color);
+
+  &--active {
+    border: 2px solid var(--accent-color);
+  }
 
   &--garden {
     background-color: #30bf19;
@@ -21,6 +27,10 @@
   }
 
   &--tools {
-    background-color: #ff3a3a;
+    background-color: #555050;
+  }
+
+  &--all {
+    background-color: #0e0e0e;
   }
 }

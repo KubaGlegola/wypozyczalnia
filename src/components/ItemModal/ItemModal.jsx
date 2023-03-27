@@ -35,9 +35,13 @@ const ItemModal = props => {
         </p>
         <p className="itemModal__price">
           {priceForSixHour && (
-            <span>{`Cena za 6 godzin: ${priceForSixHour} zł`}</span>
+            <span>
+              <b>{`Cena za 6 godzin:`}</b> {`${priceForSixHour} zł`}
+            </span>
           )}
-          <span>{`Cena za dobę: ${priceForDay} zł`}</span>
+          <span>
+            <b>{`Cena za dobę:`}</b> {`${priceForDay} zł`}
+          </span>
         </p>
         <Button
           className="button--secondary itemModal__button"
