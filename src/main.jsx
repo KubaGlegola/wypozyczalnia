@@ -5,7 +5,7 @@ import App from './App';
 import './global-styles/index.scss';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/homePage/HomePage';
-import Offer from './pages/offer/Offer';
+import OfferPage from './pages/OfferPage/OfferPage';
 import FaqPage from './pages/FaqPage/FaqPage';
 
 const router = createBrowserRouter([
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/oferta',
-        element: <Offer />,
+        element: <OfferPage />,
         children: [
           {
             path: ':category',
-            element: <Offer />,
+            element: <OfferPage />,
           },
         ],
       },

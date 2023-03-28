@@ -4,6 +4,7 @@
     object-fit: contain;
     margin: 0 auto;
     display: block;
+    filter: drop-shadow(var(--drop-shadow));
   }
 
   & &__content {

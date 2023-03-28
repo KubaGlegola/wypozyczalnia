@@ -21,6 +21,7 @@
     width: 100px;
     height: 120px;
     object-fit: contain;
+    filter: drop-shadow(var(--drop-shadow));
   }
 
   & &__content {

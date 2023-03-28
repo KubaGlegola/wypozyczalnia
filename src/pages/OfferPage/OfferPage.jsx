@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import Items from '../../components/Items/Items';
 import ItemModal from '../../components/ItemModal/ItemModal';
-import ItemCategory from '../../components/ItemCategory/ItemCategory';
 import { NavLink, useParams } from 'react-router-dom';
 import Container from '../../components/container/Container';
-import './Offer.scss';
+import './OfferPage.scss';
 
-const Offer = () => {
+const OfferPage = () => {
   const [modalIsShown, setModalIsShown] = useState(false);
   const [modalItem, setModalItem] = useState();
   let { category } = useParams();
-  const categories = ['wszystko', 'dom', 'ogród', 'budowa', 'narzędzia'];
 
   const showModalHandler = () => {
     setModalIsShown(true);
@@ -29,8 +27,8 @@ const Offer = () => {
       {modalIsShown && (
         <ItemModal hideModal={hideModalHandler} item={modalItem} />
       )}
-      <Container className="offer__container">
-        <p className="offer__filter">Filtruj:</p>
+      <Container className="offerPage__container">
+        <p className="offerPage__filter">Filtruj:</p>
         <NavLink
           to="/oferta"
           className={({ isActive }) =>
@@ -92,4 +90,4 @@ const Offer = () => {
   );
 };
 
-export default Offer;
+export default OfferPage;
