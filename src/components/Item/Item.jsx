@@ -13,7 +13,7 @@ const Item = props => {
   };
 
   return (
-    <div className="item">
+    <div className="item" data-aos="flip-right" data-aos-duration="1500">
       <div className="item__imageContainer">
         <img src={img} className="item__image" loading="lazy" />
       </div>

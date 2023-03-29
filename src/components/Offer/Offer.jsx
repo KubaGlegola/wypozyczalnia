@@ -6,7 +6,7 @@ import Button from '../button/Button';
 
 const Offer = () => {
   return (
-    <section className="offer">
+    <section className="offer" data-aos="fade-right" data-aos-duration="1500">
       <h1 className="offer__title">Zapraszamy do zapoznania się z ofertą</h1>
       <p className="offer__description">
         Możesz wyświetlić interesującą Cię kategorię lub przejść do pełnej

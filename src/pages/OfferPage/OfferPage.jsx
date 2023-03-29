@@ -4,6 +4,7 @@ import ItemModal from '../../components/ItemModal/ItemModal';
 import { NavLink, useParams } from 'react-router-dom';
 import Container from '../../components/container/Container';
 import './OfferPage.scss';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 const OfferPage = () => {
   const [modalIsShown, setModalIsShown] = useState(false);
@@ -24,12 +25,21 @@ const OfferPage = () => {
 
   return (
     <>
+      <SectionTitle title="oferta" />
       {modalIsShown && (
         <ItemModal hideModal={hideModalHandler} item={modalItem} />
       )}
       <Container className="offerPage__container">
-        <p className="offerPage__filter">Filtruj:</p>
+        <p
+          className="offerPage__filter"
+          data-aos="slide-left"
+          data-aos-duration="2000"
+        >
+          Filtruj:
+        </p>
         <NavLink
+          data-aos="slide-right"
+          data-aos-duration="2500"
           to="/oferta"
           className={({ isActive }) =>
             isActive
@@ -41,6 +51,8 @@ const OfferPage = () => {
           Wszystko
         </NavLink>
         <NavLink
+          data-aos="slide-right"
+          data-aos-duration="2000"
           to="/oferta/dom"
           className={({ isActive }) =>
             isActive
@@ -51,6 +63,8 @@ const OfferPage = () => {
           Dom
         </NavLink>
         <NavLink
+          data-aos="slide-right"
+          data-aos-duration="1500"
           to="/oferta/ogród"
           className={({ isActive }) =>
             isActive
@@ -61,6 +75,8 @@ const OfferPage = () => {
           ogród
         </NavLink>
         <NavLink
+          data-aos="slide-right"
+          data-aos-duration="1000"
           to="/oferta/budowa"
           className={({ isActive }) =>
             isActive
@@ -71,6 +87,8 @@ const OfferPage = () => {
           Budowa
         </NavLink>
         <NavLink
+          data-aos="slide-right"
+          data-aos-duration="500"
           to="/oferta/narzędzia"
           className={({ isActive }) =>
             isActive

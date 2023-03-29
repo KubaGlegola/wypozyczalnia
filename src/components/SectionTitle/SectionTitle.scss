@@ -1,0 +1,15 @@
+.sectionTitle {
+  height: 250px;
+  background-image: url('/images/titleBackground.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+
+  & &__title {
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: 48px;
+    filter: drop-shadow(var(--drop-shadow));
+  }
+}

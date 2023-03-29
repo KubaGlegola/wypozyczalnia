@@ -6,7 +6,12 @@ import './WhyUs.scss';
 
 const WhyUs = () => {
   return (
-    <section className="whyUs">
+    <section
+      className="whyUs"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-sine"
+    >
       <h1 className="whyUs__title">Co nas wyróżnia?</h1>
       <Container className="whyUs__container">
         <div className="whyUs__item">

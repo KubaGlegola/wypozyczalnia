@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../../components/container/Container';
 import FaqItem from '../../components/Faq/FaqItem';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import './FaqPage.scss';
 
 const faqs = [
@@ -25,8 +26,8 @@ const faqs = [
 const FaqPage = () => {
   return (
     <div className="faqPage">
+      <SectionTitle title="Pytania i odpowiedzi" />
       <Container className="faqPage__container">
-        <h2 className="faqPage__title">Najczęściej zadawane pytania</h2>
         {faqs.map(faq => {
           return <FaqItem question={faq.question} answer={faq.answer} />;
         })}

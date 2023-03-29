@@ -1,10 +1,15 @@
-import React from 'react'
-import './Container.scss'
+import React from 'react';
+import './Container.scss';
 
-const Container = (props) => {
+const Container = props => {
   return (
-    <div className={`container ${props.className}`}>{props.children}</div>
-  )
-}
+    <div
+      className={`container ${props.className}`}
+      data-aos={props['data-aos']}
+    >
+      {props.children}
+    </div>
+  );
+};
 
-export default Container
+export default Container;

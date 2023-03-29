@@ -12,7 +12,12 @@ const FaqItem = props => {
   };
 
   return (
-    <div className="faqItem" onClick={toggleAnswer}>
+    <div
+      className="faqItem"
+      onClick={toggleAnswer}
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    >
       <div className="faqItem__question">
         {question}
         <MdKeyboardArrowDown
