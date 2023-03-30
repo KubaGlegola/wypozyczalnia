@@ -31,7 +31,13 @@ const ItemModal = props => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum
           corrupti, suscipit doloremque voluptas, facere in quidem accusamus
           velit est a maxime? Itaque dolorem minima quam dolore voluptatum,
-          magni praesentium?
+          magni praesentium? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Porro harum corrupti, suscipit doloremque voluptas, facere in
+          quidem accusamus velit est a maxime? Itaque dolorem minima quam dolore
+          voluptatum, magni praesentium? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Porro harum corrupti, suscipit doloremque voluptas,
+          facere in quidem accusamus velit est a maxime? Itaque dolorem minima
+          quam dolore voluptatum, magni praesentium?
         </p>
         <p className="itemModal__price">
           {priceForSixHour && (

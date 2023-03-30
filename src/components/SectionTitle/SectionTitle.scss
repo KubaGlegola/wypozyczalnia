@@ -7,9 +7,17 @@
   box-shadow: var(--box-shadow);
 
   & &__title {
+    margin: 1rem;
     text-transform: uppercase;
     color: var(--white-color);
-    font-size: 48px;
+    font-size: 32px;
     filter: drop-shadow(var(--drop-shadow));
+    text-align: center;
+  }
+
+  @media (min-width: 650px) {
+    & &__title {
+      font-size: 48px;
+    }
   }
 }

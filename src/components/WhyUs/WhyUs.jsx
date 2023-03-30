@@ -10,7 +10,7 @@ const WhyUs = () => {
       className="whyUs"
       data-aos="fade-up"
       data-aos-duration="1500"
-      data-aos-easing="ease-in-sine"
+      data-aos-easing="fade-up"
     >
       <h1 className="whyUs__title">Co nas wyróżnia?</h1>
       <Container className="whyUs__container">

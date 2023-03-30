@@ -16,7 +16,11 @@ import Container from '../container/Container';
 
 const producers = () => {
   return (
-    <Container className="producers" data-aos="fade-up-left">
+    <Container
+      className="producers"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
       {/* <h2 className="producers__title">w naszej ofercie posiadamy sprzęt najlepszych firm na rynku</h2> */}
       <Carousel
         className="carousel"
