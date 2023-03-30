@@ -35,6 +35,15 @@ const Menu = props => {
         Kontakt
       </NavLink>
       <NavLink
+        to="/regulamin"
+        className={({ isActive }) =>
+          isActive ? 'menu__link menu__link--active' : 'menu__link'
+        }
+        onClick={closeMenu}
+      >
+        Regulamin
+      </NavLink>
+      <NavLink
         to="/faq"
         className={({ isActive }) =>
           isActive ? 'menu__link menu__link--active' : 'menu__link'

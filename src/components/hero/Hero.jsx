@@ -6,13 +6,13 @@ import './Hero.scss';
 
 const Hero = () => {
   return (
-    <div className="hero" data-aos="zoom-in" data-aos-duration="1500">
+    <div className="hero" data-aos="zoom-out" data-aos-duration="1500">
       <Container className="hero__container">
         <div className="hero__content">
           <h3 className="hero__subtitle">
             Wypożyczalnia sprzętu ogrodniczo-budowlanego
           </h3>
-          <h2 className="hero__title">najlepszy sprzęt w jednym miejscu</h2>
+          <h2 className="hero__title">z nami wykonasz każde zadanie</h2>
           <div className="hero__buttonsContainer">
             <Button className="button--secondary">
               <Link to="/kontakt">kontakt</Link>

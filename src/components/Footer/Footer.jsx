@@ -4,6 +4,7 @@ import { GoLocation, GoMail } from 'react-icons/go';
 import { BsTelephone } from 'react-icons/bs';
 import { FiFacebook, FiInstagram } from 'react-icons/fi';
 import Container from '../container/Container';
+import { Link } from 'react-router-dom';
 
 const Footer = props => {
   return (
@@ -59,10 +60,11 @@ const Footer = props => {
         </div>
         <div className="footer__menu">
           <h2 className="footer__title">Menu</h2>
-          <a href="#">Strona główna</a>
-          <a href="#">Oferta</a>
-          <a href="#">Kontakt</a>
-          <a href="#">FAQ</a>
+          <Link to="/">Strona główna</Link>
+          <Link to="/oferta">Oferta</Link>
+          <Link to="/kontakt">Kontakt</Link>
+          <Link to="/regulamin">Regulamin</Link>
+          <Link to="/faq">FAQ</Link>
         </div>
         <div className="footer__info">
           <h2 className="footer__title">Informacje</h2>

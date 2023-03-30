@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     margin: 1rem auto 0;
     padding: 1rem;
+
+    & .category:hover {
+      border: 2px solid var(--accent-color);
+    }
   }
 
   &__filter {

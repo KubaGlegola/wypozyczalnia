@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/homePage/HomePage';
 import OfferPage from './pages/OfferPage/OfferPage';
 import FaqPage from './pages/FaqPage/FaqPage';
+import RegulationsPage from './pages/RegulationsPage/regulationsPage';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/faq',
         element: <FaqPage />,
+      },
+      {
+        path: '/regulamin',
+        element: <RegulationsPage />,
       },
     ],
   },
