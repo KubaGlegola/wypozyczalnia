@@ -1,0 +1,34 @@
+.regulations {
+  margin: 2rem auto;
+  padding: 0.5rem 1rem 1rem 1.5rem;
+
+  & &__listHeader {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  & &__innerList {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    font-weight: 500;
+    & > li {
+      margin-bottom: 0.5rem;
+      line-height: 1.3em;
+    }
+  }
+
+  @media (min-width: 650px) {
+    & &__listHeader {
+      font-size: 24px;
+    }
+
+    & &__innerList {
+      margin-left: 3rem;
+      font-size: 18px;
+      & > li {
+        margin-bottom: 0.5rem;
+        line-height: 1.3em;
+      }
+    }
+  }
+}

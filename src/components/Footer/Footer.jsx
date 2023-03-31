@@ -66,12 +66,12 @@ const Footer = props => {
           <Link to="/regulamin">Regulamin</Link>
           <Link to="/faq">FAQ</Link>
         </div>
-        <div className="footer__info">
+        {/* <div className="footer__info">
           <h2 className="footer__title">Informacje</h2>
           <a href="#">Najczęściej zadawane pytania</a>
           <a href="#">Regulamin</a>
           <a href="#">Warunki umowy najmu</a>
-        </div>
+        </div> */}
       </Container>
     </footer>
   );
