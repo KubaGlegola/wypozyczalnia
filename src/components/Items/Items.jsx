@@ -7,15 +7,24 @@ import Container from '../container/Container';
 const Items = props => {
   const [filteredItems, setFilteredItems] = useState([]);
 
+  const getApiData = async () => {
+    const response = await fetch('http://jglegola.pl/wp-json/wp/v2/items').then(
+      response => response.json()
+    );
+    console.log(response);
+    setFilteredItems(response);
+  };
+
   useEffect(() => {
-    if (props.filterCategory === undefined) {
-      setFilteredItems(items);
-    } else {
-      setFilteredItems(
-        items.filter(item => item.category.includes(props.filterCategory))
-      );
-    }
-  }, [props.filterCategory]);
+    // if (props.filterCategory === undefined) {
+    //   setFilteredItems(items);
+    // } else {
+    //   setFilteredItems(
+    //     items.filter(item => item.category.includes(props.filterCategory))
+    //   );
+    // }
+    getApiData();
+  }, []);
 
   return (
     <div className="items">

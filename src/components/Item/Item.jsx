@@ -5,10 +5,10 @@ import './Item.scss';
 
 const Item = props => {
   const { item: modalItem } = props;
-  const { id, img, category, name, producer, description } = modalItem;
+  const { id, img, category, name, producer, description } = modalItem.acf;
 
   const sendData = () => {
-    props.parentCallback(modalItem);
+    props.parentCallback(modalItem.acf);
     props.showModal();
   };
 
@@ -28,12 +28,7 @@ const Item = props => {
         </div>
         <h3 className="item__name">{name}</h3>
         {producer && <p className="item__producer">{producer}</p>}
-        <p className="item__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum
-          corrupti, suscipit doloremque voluptas, facere in quidem accusamus
-          velit est a maxime? Itaque dolorem minima quam dolore voluptatum,
-          magni praesentium?
-        </p>
+        <p className="item__description">{description}</p>
       </div>
       <Button className="item__button button--primary" onClick={sendData}>
         Pokaż szczegóły
