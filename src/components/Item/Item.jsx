@@ -6,9 +6,11 @@ import './Item.scss';
 const Item = props => {
   const { item: modalItem } = props;
   const { id, img, category, name, producer, description } = modalItem.acf;
+  // const { id, img, category, name, producer, description } = modalItem;
 
   const sendData = () => {
     props.parentCallback(modalItem.acf);
+    // props.parentCallback(modalItem);
     props.showModal();
   };
 

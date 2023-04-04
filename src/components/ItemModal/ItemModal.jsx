@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../button/Button';
 import ItemCategory from '../ItemCategory/ItemCategory';
 import Modal from '../Modal/Modal';
 import './ItemModal.scss';
 
 const ItemModal = props => {
+  const [radioValue, setRadioValue] = useState('description');
+
   const {
     id,
     img,
@@ -12,9 +14,15 @@ const ItemModal = props => {
     name,
     producer,
     description,
+    technicalData,
     priceForSixHour,
     priceForDay,
+    deposit,
   } = props.item;
+
+  const radioValueChange = e => {
+    setRadioValue(e.target.id);
+  };
 
   return (
     <Modal hideModal={props.hideModal} className="itemModal">
@@ -27,18 +35,25 @@ const ItemModal = props => {
         </div>
         <h3 className="itemModal__name">{name}</h3>
         <p className="itemModal__producer">{producer}</p>
-        <p className="itemModal__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum
-          corrupti, suscipit doloremque voluptas, facere in quidem accusamus
-          velit est a maxime? Itaque dolorem minima quam dolore voluptatum,
-          magni praesentium? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Porro harum corrupti, suscipit doloremque voluptas, facere in
-          quidem accusamus velit est a maxime? Itaque dolorem minima quam dolore
-          voluptatum, magni praesentium? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Porro harum corrupti, suscipit doloremque voluptas,
-          facere in quidem accusamus velit est a maxime? Itaque dolorem minima
-          quam dolore voluptatum, magni praesentium?
-        </p>
+        <div className="itemModal__details">
+          <form
+            className="itemModal__radioContainer"
+            onChange={radioValueChange}
+          >
+            <input
+              type="radio"
+              name="detailPick"
+              id="description"
+              defaultChecked
+            />
+            <label htmlFor="description">Opis</label>
+            <input type="radio" name="detailPick" id="technicalData" />
+            <label htmlFor="technicalData">Dane techniczne</label>
+          </form>
+          <p className="itemModal__description">
+            {radioValue === description ? 'opis' : technicalData}
+          </p>
+        </div>
         <p className="itemModal__price">
           {priceForSixHour && (
             <span>
@@ -47,6 +62,9 @@ const ItemModal = props => {
           )}
           <span>
             <b>{`Cena za dobę:`}</b> {`${priceForDay} zł`}
+          </span>
+          <span>
+            <b>{`Kaucja:`}</b> {`${deposit} zł`}
           </span>
         </p>
         <Button
