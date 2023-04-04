@@ -8,9 +8,9 @@ const Items = props => {
   const [filteredItems, setFilteredItems] = useState([]);
 
   const getApiData = async () => {
-    const response = await fetch('http://jglegola.pl/wp-json/wp/v2/items').then(
-      response => response.json()
-    );
+    const response = await fetch(
+      'https://wp.jglegola.pl/wp-json/wp/v2/items'
+    ).then(response => response.json());
     console.log(response);
     setFilteredItems(response);
   };
