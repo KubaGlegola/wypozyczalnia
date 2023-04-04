@@ -50,9 +50,12 @@ const ItemModal = props => {
             <input type="radio" name="detailPick" id="technicalData" />
             <label htmlFor="technicalData">Dane techniczne</label>
           </form>
-          <p className="itemModal__description">
-            {radioValue === description ? 'opis' : technicalData}
-          </p>
+
+          {radioValue === 'description' ? (
+            <p className="itemModal__description"> {description} </p>
+          ) : (
+            <p className="itemModal__technicalData"> {technicalData}</p>
+          )}
         </div>
         <p className="itemModal__price">
           {priceForSixHour && (
