@@ -1,30 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Item from '../Item/Item';
 import './Items.scss';
-import items from '../../assets/data/items';
 import Container from '../container/Container';
+import { useLoaderData } from 'react-router-dom';
 
 const Items = props => {
-  const [filteredItems, setFilteredItems] = useState([]);
-
-  const getApiData = async () => {
-    const response = await fetch(
-      'https://wp.jglegola.pl/wp-json/wp/v2/items'
-    ).then(response => response.json());
-    console.log(response);
-    setFilteredItems(response);
-  };
+  const items = useLoaderData();
+  const [filteredItems, setFilteredItems] = useState(items);
 
   useEffect(() => {
-    // if (props.filterCategory === undefined) {
-    //   setFilteredItems(items);
-    // } else {
-    //   setFilteredItems(
-    //     items.filter(item => item.category.includes(props.filterCategory))
-    //   );
-    // }
-    getApiData();
-  }, []);
+    if (props.filterCategory === undefined) {
+      setFilteredItems(items);
+    } else {
+      setFilteredItems(
+        items.filter(item => item.acf.category.includes(props.filterCategory))
+      );
+    }
+  }, [props.filterCategory]);
 
   return (
     <div className="items">

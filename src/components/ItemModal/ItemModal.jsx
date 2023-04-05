@@ -8,7 +8,6 @@ const ItemModal = props => {
   const [radioValue, setRadioValue] = useState('description');
 
   const {
-    id,
     img,
     category,
     name,

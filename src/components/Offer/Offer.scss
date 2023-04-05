@@ -37,16 +37,16 @@
     align-items: center;
 
     &--garden {
-      background-image: url(/images/ogrod.webp);
+      background-image: url(/images/ogrodMobile.webp);
     }
     &--house {
-      background-image: url(/images/dom.webp);
+      background-image: url(/images/domMobile.webp);
     }
     &--construction {
-      background-image: url(/images/budowa.webp);
+      background-image: url(/images/budowaMobile.webp);
     }
     &--tools {
-      background-image: url(/images/narzedzia.webp);
+      background-image: url(/images/narzedziaMobile.webp);
     }
   }
 
@@ -59,6 +59,19 @@
   @media (min-width: 600px) {
     & &__category {
       height: 300px;
+
+      &--garden {
+        background-image: url(/images/ogrod.webp);
+      }
+      &--house {
+        background-image: url(/images/dom.webp);
+      }
+      &--construction {
+        background-image: url(/images/budowa.webp);
+      }
+      &--tools {
+        background-image: url(/images/narzedzia.webp);
+      }
     }
 
     & &__button {

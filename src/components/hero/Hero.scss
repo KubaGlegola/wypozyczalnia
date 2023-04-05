@@ -1,5 +1,5 @@
 .hero {
-  background: url(/src/assets/heroBcg.webp);
+  background: url(/images/heroBcgMobile.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -51,5 +51,9 @@
     & &__buttonsContainer {
       gap: 1rem;
     }
+  }
+
+  @media (min-width: 1024px) {
+    background: url(/images/heroBcg.webp);
   }
 }

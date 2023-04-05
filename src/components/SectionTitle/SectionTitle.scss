@@ -1,6 +1,8 @@
 .sectionTitle {
   height: 250px;
-  background-image: url('/images/titleBackground.jpg');
+  background-image: url('/images/titleBackgroundMobile.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,5 +21,9 @@
     & &__title {
       font-size: 48px;
     }
+  }
+
+  @media (min-width: 1024px) {
+    background-image: url('/images/titleBackground.webp');
   }
 }
