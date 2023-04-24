@@ -36,8 +36,6 @@ const OfferPage = () => {
       >
         <p className="offerPage__filter">Filtruj:</p>
         <NavLink
-          // data-aos="slide-right"
-          // data-aos-duration="2500"
           to="/oferta"
           className={({ isActive }) =>
             isActive
@@ -49,8 +47,6 @@ const OfferPage = () => {
           Wszystko
         </NavLink>
         <NavLink
-          // data-aos="slide-right"
-          // data-aos-duration="2000"
           to="/oferta/dom"
           className={({ isActive }) =>
             isActive
@@ -61,8 +57,6 @@ const OfferPage = () => {
           Dom
         </NavLink>
         <NavLink
-          // data-aos="slide-right"
-          // data-aos-duration="1500"
           to="/oferta/ogród"
           className={({ isActive }) =>
             isActive
@@ -73,8 +67,6 @@ const OfferPage = () => {
           ogród
         </NavLink>
         <NavLink
-          // data-aos="slide-right"
-          // data-aos-duration="1000"
           to="/oferta/budowa"
           className={({ isActive }) =>
             isActive
@@ -85,8 +77,6 @@ const OfferPage = () => {
           Budowa
         </NavLink>
         <NavLink
-          // data-aos="slide-right"
-          // data-aos-duration="500"
           to="/oferta/narzędzia"
           className={({ isActive }) =>
             isActive

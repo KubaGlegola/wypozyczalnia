@@ -18,10 +18,9 @@ const producers = () => {
   return (
     <Container
       className="producers"
-      data-aos="fade-up"
+      data-aos="fade-left"
       data-aos-duration="1500"
     >
-      {/* <h2 className="producers__title">w naszej ofercie posiadamy sprzęt najlepszych firm na rynku</h2> */}
       <Carousel
         className="carousel"
         axis="horizontal"
