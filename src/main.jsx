@@ -8,6 +8,7 @@ import HomePage from './pages/homePage/HomePage';
 import OfferPage from './pages/OfferPage/OfferPage';
 import FaqPage from './pages/FaqPage/FaqPage';
 import RegulationsPage from './pages/RegulationsPage/RegulationsPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage/PrivacyPolicyPage';
 import { ItemsLoader } from './components/Items/ItemsLoader';
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/regulamin',
         element: <RegulationsPage />,
+      },
+      {
+        path: '/politykaprywatnosci',
+        element: <PrivacyPolicyPage />,
       },
     ],
   },

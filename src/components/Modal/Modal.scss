@@ -1,9 +1,9 @@
 .modal {
   position: fixed;
-  top: 5vh;
+  top: 3vh;
   left: 5%;
   width: 90%;
-  max-height: 90vh;
+  max-height: 94vh;
   overflow-y: scroll;
   background-color: white;
   padding: 1rem;
@@ -31,6 +31,8 @@
 @media (min-width: 768px) {
   .modal {
     width: 40rem;
+    max-height: 90vh;
+    top: 5vh;
     left: calc(50% - 20rem);
   }
 }

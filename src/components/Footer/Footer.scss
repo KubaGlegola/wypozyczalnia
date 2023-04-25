@@ -89,6 +89,17 @@ footer {
     }
   }
 
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+    text-align: center;
+    & a {
+      color: var(--accent-color);
+    }
+  }
+
   @media (min-width: 650px) {
     grid-template-columns: repeat(2, 220px);
     grid-template-rows: repeat(2, 1fr);

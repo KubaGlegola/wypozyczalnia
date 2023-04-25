@@ -1,0 +1,20 @@
+.privacyPolicyPage {
+  padding: 20px 0;
+  font-size: 20px;
+  line-height: 1.4em;
+
+  & &__header {
+    margin: 16px 0;
+  }
+  & &__outerList {
+    list-style: none;
+  }
+
+  & &__innerList {
+    list-style: none;
+
+    & > li {
+      margin-left: 24px;
+    }
+  }
+}

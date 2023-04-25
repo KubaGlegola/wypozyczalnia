@@ -18,8 +18,8 @@ const producers = () => {
   return (
     <Container
       className="producers"
-      data-aos="fade-left"
-      data-aos-duration="1500"
+      // data-aos="fade-left"
+      // data-aos-duration="1500"
     >
       <Carousel
         className="carousel"

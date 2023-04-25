@@ -65,14 +65,17 @@ const Footer = props => {
           <Link to="/kontakt">Kontakt</Link>
           <Link to="/regulamin">Regulamin</Link>
           <Link to="/faq">FAQ</Link>
+          <Link to="/politykaprywatnosci">Polityka prywatności</Link>
         </div>
-        {/* <div className="footer__info">
-          <h2 className="footer__title">Informacje</h2>
-          <a href="#">Najczęściej zadawane pytania</a>
-          <a href="#">Regulamin</a>
-          <a href="#">Warunki umowy najmu</a>
-        </div> */}
       </Container>
+      <div className="footer__copyright">
+        <p>
+          Copyright &copy; 2023 Wypożczalnia sprzetu budowalnego Łukasz Kustra.
+        </p>
+        <p>
+          Stworzone przez <a href="https://jglegola.pl">jglegola</a>
+        </p>
+      </div>
     </footer>
   );
 };

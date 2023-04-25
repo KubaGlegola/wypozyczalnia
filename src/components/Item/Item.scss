@@ -17,6 +17,11 @@
     margin: 0 auto;
   }
 
+  & &__categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__image {
     width: 100px;
     height: 120px;
