@@ -1,36 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Item from '../Item/Item';
 import './Items.scss';
 import Container from '../container/Container';
-import { useLoaderData } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
+import Loader from '../Loader/Loader';
 
 const Items = props => {
-  const items = useLoaderData();
-  const [filteredItems, setFilteredItems] = useState(items);
+  const { data, isLoading, error } = useFetch(
+    'https://wp.wypozyczalnia-kustra.pl/wp-json/acf/v3/items/?per_page=100'
+  );
 
-  useEffect(() => {
-    if (props.filterCategory === undefined) {
-      setFilteredItems(items);
-    } else {
-      setFilteredItems(
-        items.filter(item => item.acf.category.includes(props.filterCategory))
-      );
-    }
-  }, [props.filterCategory]);
+  isLoading ? console.log('ładowanie') : console.log(data);
 
   return (
     <div className="items">
       <Container className="items__container">
-        {filteredItems.map(item => {
-          return (
-            <Item
-              item={item}
-              key={item.id}
-              showModal={props.showModal}
-              parentCallback={props.parentCallback}
-            />
-          );
-        })}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          data.map(item => {
+            return (
+              <Item
+                item={item}
+                key={item.id}
+                showModal={props.showModal}
+                parentCallback={props.parentCallback}
+              />
+            );
+          })
+        )}
       </Container>
     </div>
   );
