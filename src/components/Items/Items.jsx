@@ -10,15 +10,18 @@ const Items = props => {
     'https://wp.wypozyczalnia-kustra.pl/wp-json/acf/v3/items/?per_page=100'
   );
 
-  isLoading ? console.log('ładowanie') : console.log(data);
-
   return (
     <div className="items">
       <Container className="items__container">
         {isLoading ? (
           <Loader />
         ) : (
-          data.map(item => {
+          (props.filterCategory
+            ? data.filter(item =>
+                item.acf.category.includes(props.filterCategory)
+              )
+            : data
+          ).map(item => {
             return (
               <Item
                 item={item}

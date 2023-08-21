@@ -4,6 +4,7 @@ import { Squash as Hamburger } from 'hamburger-react';
 import './Header.scss';
 import logo from '/src/assets/logo.png';
 import Menu from '../Menu/Menu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const isDesktop = useMediaQuery({
@@ -17,7 +18,9 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img src={logo} className="header__logo" />
+      <Link to="/">
+        <img src={logo} className="header__logo" alt="company logo" />
+      </Link>
       {!isDesktop && <Hamburger toggled={isOpen} toggle={setOpen} />}
       <Menu isOpen={isOpen} closeMenu={closeMenuHandler} />
     </div>
